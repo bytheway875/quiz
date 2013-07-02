@@ -13,26 +13,26 @@
 
 // monthly_budget = budget_in_dollars/timeline_in_months;
 
-incomes =[];
-job_descriptions = [];
-salaries = [];
-while(income = prompt('Enter an income source (job, etc) and salary, separated by a comma')){
+// incomes =[];
+// job_descriptions = [];
+// salaries = [];
+// while(income = prompt('Enter an income source (job, etc) and salary, separated by a comma')){
   
-  job = {};
+//   job = {};
   
-  element = income.split(',');
-  job.name = element[0];
-  job.income = Number(element[1]);
+//   element = income.split(',');
+//   job.name = element[0];
+//   job.income = Number(element[1]);
 
-  console.log(element[0]);
-  console.log(element[1]);
-  incomes.push(job);
-}
+//   console.log(element[0]);
+//   console.log(element[1]);
+//   incomes.push(job);
+// }
 
-total_income = 0;
-for (i = 0; i < incomes.length; i++){
-  total_income = incomes[i].income + total_income;
-}
+// total_income = 0;
+// for (i = 0; i < incomes.length; i++){
+//   total_income = incomes[i].income + total_income;
+// }
 
 
 // var name = prompt("What's your name?");
@@ -48,4 +48,41 @@ for (i = 0; i < incomes.length; i++){
 // else {
 //   alert("Fine, I didn't want you there anyway.");
 // }
+
+// people = [];
+
+// while(person  = prompt('Enter your name and email, separated by a comma')){
+  
+//   person_object = {};
+    
+//   element = person.split(',');
+//   person_object.name = element[0];
+//   person_object.email = element[1];
+
+//   people.push(person_object);
+// }
+
+// for (i = 0; i < people.length; i++){
+//   document.write('<a href="mailto:' + people[i].email +'">' +  people[i].name +'</a>');
+// }
+
+function calculator(operator, first, second){
+  return operator(first, second);
+}
+
+calculator(function(a,b){ return a * b;}, 5, 8);
+
+function calculator1(operator){
+  var answer = arguments[1];
+  for(i = 2; i < arguments.length; i++) {
+    answer = operator(answer, arguments[i]);
+  }
+  return answer;
+}
+
+calculator1(function(a,b) { 
+  return a * b;
+} ,1,2,3,4,22,3,4,5,6);
+
+
 
